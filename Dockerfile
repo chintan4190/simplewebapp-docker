@@ -1,7 +1,12 @@
 FROM node:alpine
 
-COPY ./ ./
+WORKDIR /usr/app
+
+COPY ./package.json ./
 
 RUN npm install
+
+COPY ./index.js ./
+
 
 CMD ["npm", "start"]
