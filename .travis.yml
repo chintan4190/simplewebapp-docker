@@ -3,3 +3,5 @@ services:
   - docker
 before_install:
   - docker build -t chintan4190/simplewebapp-docker .
+script:
+  - docker run -p9080:8080 chintan4190/simplewebapp-docker
